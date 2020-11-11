@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialoga_ajout_salle</class>
+ <widget class="QDialog" name="Dialoga_ajout_salle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>459</width>
+    <height>304</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>451</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>System</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QGroupBox{
+	background-color: rgb(255, 255, 255);
+	/*background-color: rgb(255, 170, 0);*/
+
+}
+
+QLabel{
+font-size :14px;
+font-weight:bold;
+font-family: 'Source Code Pro', monospace;
+}
+QLineEdit{ background-color:#ffffff;
+
+border: 2px solid gray;
+border-radius: 10px;
+padding: 0 8px;
+}
+
+</string>
+   </property>
+   <property name="title">
+    <string>Ajout Salle</string>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>180</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+    </property>
+    <property name="text">
+     <string>Ajouter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>180</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+    </property>
+    <property name="text">
+     <string>Quitter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="return_from_ajout">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>180</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+    </property>
+    <property name="text">
+     <string>undo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>88</y>
+      <width>112</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NB Chaise</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_nomfilm_ajout">
+    <property name="geometry">
+     <rect>
+      <x>218</x>
+      <y>140</y>
+      <width>35</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox:focus{
+	background-color: rgb(255, 255, 127);
+}</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nb_chaise_ajout">
+    <property name="geometry">
+     <rect>
+      <x>218</x>
+      <y>88</y>
+      <width>126</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>62</y>
+      <width>121</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Numero Salle</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>114</y>
+      <width>120</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NB Baffles</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nm_salle_ajout">
+    <property name="geometry">
+     <rect>
+      <x>218</x>
+      <y>62</y>
+      <width>126</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>92</x>
+      <y>140</y>
+      <width>64</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NB Ecran</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nb_baffles_ajout">
+    <property name="geometry">
+     <rect>
+      <x>218</x>
+      <y>114</y>
+      <width>126</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QNb_personne_ajout{ background-color:#ffffff;
+
+border: 2px solid gray;
+border-radius: 10px;
+padding: 0 8px;}
+QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

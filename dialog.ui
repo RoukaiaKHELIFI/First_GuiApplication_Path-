@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>762</width>
+    <height>354</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox{
+	background-color: rgb(255, 255, 255);
+	/*background-color: rgb(255, 170, 0);*/
+
+}
+
+QLabel{
+font-size :14px;
+font-weight:bold;
+font-family: 'Source Code Pro', monospace;
+}
+QLineEdit{ background-color:#ffffff;
+
+border: 2px solid gray;
+border-radius: 10px;
+padding: 0 8px;
+}
+
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>0</y>
+     <width>731</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>System</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>Reservations</string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>731</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*	background-color: rgb(255, 170, 0);*/
+background-color: rgb(255, 255, 255);
+
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Affichage_reservation">
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>521</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>90</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reservations</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>149</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 13px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifier">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>120</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 16px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="close">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 16px 13px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>close</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="trier">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>180</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 16px 13px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Trier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercher">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>210</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 8px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Ajouter_reservation">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>101</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>101</y>
+        <width>72</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>127</y>
+        <width>120</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nombre Personne</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>127</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>153</y>
+        <width>64</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom Film</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>153</y>
+        <width>35</width>
+        <height>18</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>177</y>
+        <width>32</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date</string>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>317</x>
+        <y>177</y>
+        <width>110</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateTimeEdit:focus {background-color: rgb(255, 255, 127); }
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>211</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>322</x>
+        <y>211</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Supprimer_reservation">
+     <widget class="QPushButton" name="supprime">
+      <property name="geometry">
+       <rect>
+        <x>141</x>
+        <y>171</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 24px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_supp">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>171</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_supp_2">
+      <property name="geometry">
+       <rect>
+        <x>303</x>
+        <y>171</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Undo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>110</y>
+        <width>161</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Source Code Pro</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Numero Reservation</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="num_reservation_supprime">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>111</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>151</x>
+        <y>137</y>
+        <width>141</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_client_supprime">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>137</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_supp_5">
+      <property name="geometry">
+       <rect>
+        <x>384</x>
+        <y>171</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>retourne</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Modifier_reservation">
+     <widget class="QPushButton" name="modifier_2">
+      <property name="geometry">
+       <rect>
+        <x>181</x>
+        <y>201</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_modif">
+      <property name="geometry">
+       <rect>
+        <x>262</x>
+        <y>201</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_modif_2">
+      <property name="geometry">
+       <rect>
+        <x>343</x>
+        <y>201</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Undo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>113</y>
+        <width>121</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom Film</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_nomfilm">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>113</y>
+        <width>35</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSpinBox:focus {
+	background-color: rgb(255, 255, 127);
+}</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nb_personne">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>137</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dateTimeEdit">
+      <property name="geometry">
+       <rect>
+        <x>258</x>
+        <y>163</y>
+        <width>110</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateTimeEdit:focus{
+	background-color: rgb(255, 255, 127);
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>137</y>
+        <width>128</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nombre Personnes</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>163</y>
+        <width>32</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_reservation">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>87</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_client">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>61</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>191</x>
+        <y>61</y>
+        <width>72</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>ID Client</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>151</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID Reservation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitter_supp_6">
+      <property name="geometry">
+       <rect>
+        <x>424</x>
+        <y>201</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>retourne</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Rechercher_reservation">
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ID Reservation</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>110</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>110</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 24px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>110</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 24px 6px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Reservation_modifie">
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>211</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reservation est modifié !</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Ajouter_salle">
+     <widget class="QLineEdit" name="nb_chaise_ajout">
+      <property name="geometry">
+       <rect>
+        <x>287</x>
+        <y>97</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nb_personne_ajout">
+      <property name="geometry">
+       <rect>
+        <x>287</x>
+        <y>123</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QNb_personne_ajout{ background-color:#ffffff;
+
+border: 2px solid gray;
+border-radius: 10px;
+padding: 0 8px;}
+QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>259</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Quitter</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>71</y>
+        <width>96</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Numero Salle</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="return_from_ajout">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>undo</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>97</y>
+        <width>80</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nb Chaises</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>123</y>
+        <width>80</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nb Baffles</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>185</x>
+        <y>149</y>
+        <width>72</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>NB Ecrans</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>178</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 20px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="num_salle_ajout">
+      <property name="geometry">
+       <rect>
+        <x>287</x>
+        <y>71</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nb_personne_ajout_3">
+      <property name="geometry">
+       <rect>
+        <x>287</x>
+        <y>149</y>
+        <width>126</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QNb_personne_ajout{ background-color:#ffffff;
+
+border: 2px solid gray;
+border-radius: 10px;
+padding: 0 8px;}
+QLineEdit:focus {background-color: rgb(255, 255, 127); }</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Affiche_salle">
+     <widget class="QPushButton" name="modifier_3">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>132</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 16px 14px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_2">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>11</y>
+        <width>471</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_3">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>161</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 18px 13px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="close_2">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover:!pressed {
+display: inline-block;
+  padding: 16px 13px;
+ 
+  cursor: pointer;
+font-size: 11px;
+outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+ text-align: center;
+  text-decoration: none;
+  box-shadow: 0 9px #999;
+}
+QPushButton:hover {background-color: #3e8e41}
+QPushButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</string>
+      </property>
+      <property name="text">
+       <string>close</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>90</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Salles</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
